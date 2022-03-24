@@ -76,19 +76,13 @@ INSERT INTO marketing_data VALUES
 
 SELECT SUM(md.clicks) as SUM_OF_CLICKS
 FROM marketing_data md
-/* SUM_OF_CLICKS = 3584 */
+
 
 /*Question #2 Generate a query to gather the sum of revenue by geo from the store_revenue table​*/
 
 SELECT sr.store_location,SUM(sr.revenue) AS SUM_OF_REVENUE
 FROM store_revenue sr
 GROUP BY sr.store_location
-/*
-store_location                  SUM_OF_REVENUE
-United States-CA                    705711
-United States-NY                    155952
-United States-TX                    28887
-*/
 
 /*Question #3 Merge these two datasets so we can see impressions, clicks, and revenue together by date and geo. Please ensure all records from each table are accounted for.​*/
 
